@@ -1,7 +1,11 @@
-import "./App.css";
+import FaqAccordion from "./components/accordion/Accordion";
 
 function App() {
-	return <div>Hello, Nicolette!</div>;
+	return (
+		<main className="top-bg-pattern">
+			<FaqAccordion />
+		</main>
+	);
 }
 
 export default App;
