@@ -51,47 +51,95 @@ main {
 	background-image: url("./assets/images/background-pattern-mobile.svg");
 }
 
-.faq-card {
+.accordion {
+	margin: calc(var(--spacing-base) * 2) 0;
 	max-width: 327px;
 	background-color: var(--bg-color-card);
 	color: var(--font-color-base);
 	z-index: 1;
-
 	border-radius: 0.8rem;
 	padding: var(--spacing-base);
 }
 
-.faq-card__accordion .faq-card__header {
+.accordion__header {
 	display: flex;
 	justify-content: start;
 	align-items: center;
 	gap: var(--spacing-base);
-}
-
-.accordion__item {
-}
-
-.accordion__item:not(:last-child) {
-	margin-bottom: 2rem;
-}
-
-.faq__question {
 	margin-bottom: var(--spacing-base);
 }
 
-.faq__seperator {
-	border-top: 0.1rem solid var(--bg-color);
-}
-
-.icon-star {
-	height: 2.4rem;
-	width: 2.4rem;
-}
-
-.faq-card__heading {
+.accordion__heading {
 	font-size: 3.2rem;
 	font-weight: var(--fw-bold);
 	color: var(--font-color-heading);
+}
+
+.accordion__panel {
+	position: relative;
+}
+
+.accordion__panel:not(:last-child):after {
+	position: absolute;
+	transform: translateY(2rem);
+	content: "";
+	width: 100%;
+	height: 0.1rem;
+	border-top: 0.1rem solid var(--bg-color);
+}
+
+.accordion__panel:not(:last-child):has(
+		.accordion__content[aria-hidden="false"]
+	):after {
+	transform: translateY(0.5rem);
+}
+
+.accordion__panel:not(:last-child) {
+	margin-bottom: 4rem;
+}
+
+.accordion--trigger {
+	border: 0;
+	background: transparent;
+}
+
+.accordion__title {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 3rem;
+	justify-content: start;
+	align-items: center;
+	gap: var(--spacing-base);
+	font-size: 1.6rem;
+	font-weight: var(--fw-semi-bold);
+	text-align: left;
+	color: var(--font-color-heading);
+	margin-bottom: var(--spacing-base);
+}
+
+.accordion__title:hover,
+.accordion__title:focus {
+	color: var(--primary-color);
+	cursor: pointer;
+}
+
+.accordion__content {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 0.8s;
+}
+
+.accordion__content[aria-hidden="true"] {
+	grid-template-rows: 1fr;
+}
+
+.accordion__content > div {
+	overflow: hidden;
+}
+
+.icon {
+	height: 2.4rem;
+	width: 2.4rem;
 }
 
 @media screen and (min-width: 720px) {
