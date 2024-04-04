@@ -22,14 +22,14 @@ export default function AccordionItem({
 					{items.isOpen ? (
 						<img
 							aria-hidden="true"
-							src="../../../src/assets/images/icon-minus.svg"
+							src="icon-minus.svg"
 							alt="Minus icon to close the answer."
 							className="icon"
 						/>
 					) : (
 						<img
 							aria-hidden="true"
-							src="../../../src/assets/images/icon-plus.svg"
+							src="icon-plus.svg"
 							alt="Plus icon to open the answer."
 							className="icon"
 						/>

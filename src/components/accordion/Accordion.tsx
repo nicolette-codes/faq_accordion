@@ -55,7 +55,7 @@ export default function FaqAccordion() {
 		<section className="accordion">
 			<div className="accordion__header">
 				<img
-					src="../../../src/assets/images/icon-star.svg"
+					src="icon-star.svg"
 					alt="Purple 4 sided star icon."
 					className="icon"
 				/>
