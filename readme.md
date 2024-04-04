@@ -35,7 +35,7 @@ Desktop
 
 ### Links
 
--   Live Site URL: [React | Accordion Component](https://660e674a009af8c56180cc92--shimmering-malabi-691453.netlify.app/)
+-   Live Site URL: [React | Accordion Component](https://shimmering-malabi-691453.netlify.app/)
 
 ## My process
 

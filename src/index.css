@@ -48,7 +48,7 @@ main {
 	width: 100%;
 	position: absolute;
 	content: "";
-	background-image: url("background-pattern-mobile.svg");
+	background-image: url("../src/assets/background-pattern-mobile.svg");
 }
 
 .accordion {
@@ -145,7 +145,7 @@ main {
 @media screen and (min-width: 720px) {
 	.top-bg-pattern:after {
 		height: 320px;
-		background-image: url("background-pattern-desktop.svg");
+		background-image: url("../src/assets/background-pattern-desktop.svg");
 	}
 
 	.accordion {
