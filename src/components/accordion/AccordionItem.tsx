@@ -18,7 +18,7 @@ export default function AccordionItem({
 					aria-expanded={items.isOpen}
 					onClick={() => onVisibilityChange(items.id)}
 				>
-					<div id="panel-1-title">{items.question}</div>
+					<div id={`panel-${items.id}-title`}>{items.question}</div>
 					{items.isOpen ? (
 						<img
 							aria-hidden="true"
